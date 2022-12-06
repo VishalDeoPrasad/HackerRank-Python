@@ -1,0 +1,1 @@
+print("Diagonal Difference HackerRank program")
