@@ -16,5 +16,5 @@ def gradingStudents(grades):
 
 	return marks	
 grades=[73,67,38,33]
-print gradingStudents(grades)
+print (gradingStudents(grades))
 
