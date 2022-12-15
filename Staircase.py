@@ -1,4 +1,10 @@
+def staircase(n):
+    for i in range(n):
+        for j in range(n):
+            if i+j >= 3:
+                print("#", end="")
+            else:
+                print(" ", end="")
+        print()
 
-n=input("Enter Number to Stairs:") #Taking input from user)
-for i in range(1,n+1):             #Loop from 1 to n+1
-    print " "*(n-i) + "#"*i        #concatenate space and #
+staircase(4)
