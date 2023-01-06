@@ -1,0 +1,23 @@
+def pickingNumbers(a):
+    # Write your code here
+    max_subarray = []
+    a.sort()
+    cnt = 1
+    for i in range(len(a) - 1):
+        for j in range(i+1, len(a)):
+            if abs(a[i] - a[j]) < 2:
+                cnt += 1
+            else:
+                max_subarray.append(cnt)
+                cnt = 1
+                break
+            if j == len(a) - 1:
+                max_subarray.append(cnt)
+                cnt = 1
+                
+        if i == len(a)-2:
+            max_subarray.append(cnt)
+            print(max_subarray)
+            return max(max_subarray)
+a = [4,6,5,3,3,1]
+print(pickingNumbers(a))
