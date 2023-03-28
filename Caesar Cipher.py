@@ -9,13 +9,13 @@ def caesarCipher(s, k):
                 new_s += chr(ord(c)+k)
             else:
                 diff = abs(ord(c)+k - 122)
-                new_s += chr(97+diff-1)
+                new_s += chr(96+diff)
         elif ord(c) >= 65 and ord(c) <= 90:
             if ord(c)+k <= 90:
                 new_s += chr(ord(c)+k)
             else:
                 diff = abs(ord(c)+k - 90)
-                new_s += chr(65+diff-1)
+                new_s += chr(64+diff)
         else:
             new_s += c
     return new_s
