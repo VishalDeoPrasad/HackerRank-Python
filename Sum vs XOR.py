@@ -7,4 +7,4 @@ def sumXor(n):
             ans *= 2
     return ans
 
-print(sumXor(4))
+print(sumXor(10))
