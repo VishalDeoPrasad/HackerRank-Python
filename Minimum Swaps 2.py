@@ -12,5 +12,16 @@ def minimumSwaps(arr):
             i -= 1
     print(temp)
 
+def minimumSwaps(arr):
+    arr_set = [(arr[i], i) for i in range(len(arr))]
+    print(arr_set)
+    arr_set.sort()
+    print(arr_set)
+    for i in range(len(arr_set)):
+        idx = arr_set[i][1]
+        while i != idx:
+            arr_set[idx], arr_set[i] = arr_set[i], arr_set[idx]
+            
 
-print(minimumSwaps([1,3,5,2,4,6,7]))
+    return arr_set
+print(minimumSwaps([7,1,3,2,4,5,6]))
